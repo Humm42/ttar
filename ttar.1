@@ -1,0 +1,51 @@
+.Dd September 27, 2019
+.Dt TTAR 1
+.Os
+.Sh NAME
+.Nm ttar
+.Nd "plain text archiver"
+.Sh SYNOPSIS
+.Nm
+.Op Fl ctx
+.Op Fl f Ar archive
+.Op Ar files ...
+.Sh DESCRIPTION
+The
+.Nm
+tool creates, extracts files from or lists files in an archive file in ptar
+format.
+.Pp
+The fllowing flags are accepted:
+.Bl -tag
+.It Fl c
+create
+.Ar archive
+from
+.Ar files
+.It Fl t
+list listed
+.Ar files
+or all files in
+.Ar archive
+.It Fl x
+extract listed
+.Ar files
+or all files from
+.Ar archive
+.Sh "EXIT STATUS"
+.Ex -std
+.Sh "SEE ALSO"
+.Xr ar 1 , Xr ptar 1 , Xr tar 1
+.Rs
+.%U https://github.com/jtvaughan/ptar
+.%A Jordan Vaughan
+.%T the original ptar tool
+.Re
+.Sh HISTORY
+The original
+.Xr ptar 1
+tool was written by Jordan Vaughan.
+.Sh AUTHORS
+.An Humm
+.Sh BUGS
+Yes.

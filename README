@@ -1,0 +1,6 @@
+ttar - plain text archiver
+==========================
+ttar is an archiver, similar to tar(1), that uses plain-text archives. It’s an
+implementation of the [`ptar`][1] format of the tool with the same name.
+
+[1]: https://github.com/jtvaughan/ptar
