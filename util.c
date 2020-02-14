@@ -1,9 +1,9 @@
 #include "util.h"
 
+#include <stdarg.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
-#include <stdarg.h>
 
 void
 die(char const *fmt, ...)
@@ -16,7 +16,8 @@ die(char const *fmt, ...)
 	if (fmt[strlen(fmt)-1] == ':') {
 		fputc(' ', stderr);
 		perror(NULL);
-	} else fputc('\n', stderr);
+	} else
+		fputc('\n', stderr);
 
 	exit(1);
 }
