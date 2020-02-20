@@ -1,9 +1,9 @@
-#include "util.h"
-
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+#include "util.h"
 
 void
 die(char const *fmt, ...)
@@ -20,6 +20,15 @@ die(char const *fmt, ...)
 		fputc('\n', stderr);
 
 	exit(1);
+}
+
+void *
+emalloc(size_t size)
+{
+	void *mem;
+	if (!(mem = malloc(size)))
+		die("%s: malloc() failed:", argv0);
+	return mem;
 }
 
 char *argv0 = NULL;

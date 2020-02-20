@@ -4,6 +4,7 @@
 #define UNUSED(x) (void)(x)
 
 extern void	die(char const *, ...);
+extern void	*emalloc(size_t);
 
 extern char	*argv0;
 #define ARGBEGIN for(argv0=(*argv),--argc,++argv;*argv&&argv[0][0]=='-'&& \
